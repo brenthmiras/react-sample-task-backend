@@ -4,7 +4,9 @@ const cors = require('cors');
 
 // Initialize app
 const app = express();
-const port = 3000;
+
+// We used process.env.PORT to comply with heroku
+const port = process.env.PORT || 3000;
 
 // Allow all cross origin requests
 app.use(cors());
